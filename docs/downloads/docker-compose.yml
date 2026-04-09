@@ -1,0 +1,10 @@
+services:
+  linux-lab:
+    build: .
+    container_name: linux-lab
+    hostname: ubuntu-lab
+    stdin_open: true    # Keep STDIN open (docker run -i)
+    tty: true           # Allocate a pseudo-TTY (docker run -t)
+    volumes:
+      - ./shared:/home/student/shared   # Share files between host and container
+    restart: unless-stopped

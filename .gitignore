@@ -1,0 +1,12 @@
+# User environment config (contains distro selection)
+.env
+
+# User practice files (shared/ is a bind mount for the container)
+shared/*
+!shared/.gitkeep
+
+# MkDocs build output
+site/
+
+# Python virtual environment
+.venv/
