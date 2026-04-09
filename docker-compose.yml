@@ -1,0 +1,14 @@
+services:
+  linux-lab:
+    build:
+      context: .
+      args:
+        BASE_IMAGE: ${BASE_IMAGE:-ubuntu:24.04}
+        DISTRO: ${DISTRO:-ubuntu}
+    container_name: linux-lab
+    hostname: ${DISTRO:-ubuntu}-lab
+    stdin_open: true    # Keep STDIN open (docker run -i)
+    tty: true           # Allocate a pseudo-TTY (docker run -t)
+    volumes:
+      - ./shared:/home/student/shared   # Share files between host and container
+    restart: unless-stopped
