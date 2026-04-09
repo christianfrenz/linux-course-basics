@@ -1,0 +1,87 @@
+site_name: Learn Linux — Ubuntu Docker Lab
+site_description: A hands-on, step-by-step Linux tutorial running inside Docker
+site_url: https://christianfrenz.github.io/linux-course-basics/
+repo_url: https://github.com/christianfrenz/linux-course-basics
+repo_name: christianfrenz/linux-course-basics
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - content.code.copy
+    - search.highlight
+    - search.suggest
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Lab Setup: setup.md
+  - Lessons:
+      - 01 — Getting Started: lessons/01-getting-started.md
+      - 02 — Navigating the Filesystem: lessons/02-filesystem-navigation.md
+      - 03 — Files & Directories: lessons/03-files-and-directories.md
+      - 04 — Viewing & Editing Files: lessons/04-viewing-editing-files.md
+      - 05 — Permissions & Ownership: lessons/05-permissions-ownership.md
+      - 06 — Process Management: lessons/06-process-management.md
+      - 07 — Package Management: lessons/07-package-management.md
+      - 08 — Networking Basics: lessons/08-networking-basics.md
+      - 09 — Shell Scripting: lessons/09-shell-scripting.md
+      - 10 — System Administration: lessons/10-system-administration.md
+      - 11 — Troubleshooting: lessons/11-troubleshooting.md
+      - 12 — I/O Redirection & Pipes: lessons/12-io-redirection-pipes.md
+      - 13 — Text Processing: lessons/13-text-processing.md
+      - 14 — Regular Expressions: lessons/14-regular-expressions.md
+      - 15 — Shell Customization: lessons/15-shell-customization.md
+      - 16 — SSH & Remote Access: lessons/16-ssh-remote-access.md
+      - 17 — Git Basics: lessons/17-git-basics.md
+      - 18 — Docker Basics: lessons/18-docker-basics.md
+      - 19 — Login Auditing: lessons/19-login-auditing.md
+      - 20 — Useful CLI Tools: lessons/20-useful-cli-tools.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/christianfrenz
